@@ -5,16 +5,40 @@ import { HomeFourSteps } from "./HomeFourSteps";
 import { HomeAboutUs } from "./HomeAboutUs";
 import { HomeOrganisations } from "./HomeOrganisations";
 import { HomeContactUs } from "./HomeContactUs";
+import styled, { createGlobalStyle } from "styled-components";
+import { colors, fonts } from "./../../styles/styles";
+
+const GlobalStyle = createGlobalStyle`
+body{
+  font-family: ${fonts.mainFont};
+  background-color: ${colors.backgroundWhite}
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+`;
+
+const StyledWrapper = styled.div`
+  min-height: 100vh;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: ${colors.blue};
+`;
 
 export const Home = () => {
   return (
     <>
-      <HomeHeader />
-      <HomeThreeColumns />
-      <HomeFourSteps />
-      <HomeAboutUs />
-      <HomeOrganisations />
-      <HomeContactUs />
+      <GlobalStyle />
+      <StyledWrapper>
+        <HomeHeader />
+        <HomeThreeColumns />
+        <HomeFourSteps />
+        <HomeAboutUs />
+        <HomeOrganisations />
+        <HomeContactUs />
+      </StyledWrapper>
     </>
   );
 };
