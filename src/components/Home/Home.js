@@ -22,7 +22,7 @@ body{
 
 const StyledWrapper = styled.div`
   min-height: 100vh;
-  width: 1400px;
+  width: 100vw;
   margin: 0 auto;
   background-color: ${colors.blue};
 `;
