@@ -5,14 +5,7 @@ import headerImage from "./../../assets/Home-Hero-Image.jpg";
 import decorImage from "./../../assets/Decoration.svg";
 import { AuthNav } from "./AuthNav";
 import { ActionsNav } from "./ActionsNav";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
+import { MainNav } from "./MainNav";
 
 const StyledHeader = styled.header`
   height: 100vh;
@@ -28,32 +21,6 @@ const StyledContentWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-`;
-
-const StyledUl = styled.ul`
-  list-style: none;
-  margin-right: 30px
-  display: flex;
-  justify-content: flex-end;
-  // border: 1px solid red;
-`;
-
-const StyledLi = styled.li`
-  // border: 1px solid purple;
-  margin: 10px;
-  padding: 10px 0;
-  &:nth-child(1) {
-    border: 0.75px solid ${colors.textDarkGrey};
-  }
-`;
-
-const StyledLink = styled(Link)`
-  // border: 1px solid orange;
-  font-size: 18px;
-  text-decoration: none;
-  height: 100%;
-  padding: 10px;
-  color: ${colors.textDarkGrey};
 `;
 
 const StyledH1 = styled.h1`
@@ -73,25 +40,7 @@ export const HomeHeader = () => {
     <StyledHeader>
       <StyledContentWrapper>
         <AuthNav />
-        <nav>
-          <StyledUl>
-            <StyledLi>
-              <StyledLink to="example">Start</StyledLink>
-            </StyledLi>
-            <StyledLi>
-              <StyledLink to="/rejestracja">O co chodzi?</StyledLink>
-            </StyledLi>
-            <StyledLi>
-              <StyledLink to="/rejestracja">O nas</StyledLink>
-            </StyledLi>
-            <StyledLi>
-              <StyledLink to="/rejestracja">Fundacja i organizacje</StyledLink>
-            </StyledLi>
-            <StyledLi>
-              <StyledLink to="/rejestracja">Kontakt</StyledLink>
-            </StyledLi>
-          </StyledUl>
-        </nav>
+        <MainNav />
         <StyledH1>
           Zacznij pomagać!
           <br /> Oddaj niechciane rzeczy w zaufane ręce
