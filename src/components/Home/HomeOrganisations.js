@@ -1,5 +1,5 @@
 import React from "react";
 
 export const HomeOrganisations = () => {
-  return <h2>Organisations</h2>;
+  return <h2 id="organisations">Organisations</h2>;
 };

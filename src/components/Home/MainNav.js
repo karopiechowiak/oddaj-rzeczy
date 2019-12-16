@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { colors, fonts } from "./../../styles/styles";
-
 import {
   Link,
   Element,
@@ -42,21 +41,29 @@ export const MainNav = () => {
     <nav>
       <StyledUl>
         <StyledLi>
-          <StyledLink to="example" smooth duration={1000}>
+          <StyledLink to="threeColumns" smooth duration={1000}>
             Start
           </StyledLink>
         </StyledLi>
         <StyledLi>
-          <StyledLink to="/rejestracja">O co chodzi?</StyledLink>
+          <StyledLink to="fourSteps" smooth duration={1000}>
+            O co chodzi?
+          </StyledLink>
         </StyledLi>
         <StyledLi>
-          <StyledLink to="/rejestracja">O nas</StyledLink>
+          <StyledLink to="aboutUs" smooth duration={1000}>
+            O nas
+          </StyledLink>
         </StyledLi>
         <StyledLi>
-          <StyledLink to="/rejestracja">Fundacja i organizacje</StyledLink>
+          <StyledLink to="organisations" smooth duration={1000}>
+            Fundacja i organizacje
+          </StyledLink>
         </StyledLi>
         <StyledLi>
-          <StyledLink to="/rejestracja">Kontakt</StyledLink>
+          <StyledLink to="contactUs" smooth duration={1000}>
+            Kontakt
+          </StyledLink>
         </StyledLi>
       </StyledUl>
     </nav>
