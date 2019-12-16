@@ -31,9 +31,12 @@ const StyledLink = styled(Link)`
   // border: 1px solid orange;
   font-size: 18px;
   text-decoration: none;
-  height: 100%;
+  width: 100%;
   padding: 10px;
   color: ${colors.textDarkGrey};
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const MainNav = () => {
