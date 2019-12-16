@@ -8,6 +8,7 @@ const StyledSection = styled.section`
   justify-content: space-evenly;
   text-align: center;
   color: ${colors.textBrown};
+  padding: 80px 0;
 `;
 
 const StyledArticle = styled.article`
@@ -34,7 +35,7 @@ const StyledP = styled.p`
 
 export const HomeThreeColumns = () => {
   return (
-    <StyledSection>
+    <StyledSection id="threeColumns">
       <StyledArticle>
         <StyledHeader>
           <StyledNumberSpan>10</StyledNumberSpan>
