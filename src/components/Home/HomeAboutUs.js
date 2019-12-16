@@ -7,33 +7,53 @@ import peopleImage from "./../../assets/People.jpg";
 
 const StyledSection = styled.section`
   background-color: ${colors.backgroundGrey};
+  display: flex;
 `;
 
-const TextWrapper = styled.div``;
+const TextWrapper = styled.div`
+  box-sizing: border-box;
+  flex-basis: 50%;
+  padding: 100px;
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledHeader = styled.h2`
+  font-weight: 400;
+  font-size: 38px;
+`;
 
 const StyledDecorImage = styled.img`
+  margin: 20px 0;
+`;
+
+const StyledSignatureImage = styled.img`
+  width: 150px;
+  align-self: flex-end;
   margin-top: 20px;
-  margin-bottom: 50px;
 `;
 
 const ImageWrapper = styled.div`
-  backround-image: url(${peopleImage});
-  width: 50%;
-  height: 100px;
+  background-image: url(${peopleImage});
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-basis: 50%;
 `;
 
 export const HomeAboutUs = () => {
   return (
     <StyledSection id="aboutUs">
       <TextWrapper>
-        <h2>O nas</h2>
+        <StyledHeader>O nas</StyledHeader>
         <StyledDecorImage src={decorImage} />
         <p>
           Nori grape silver beet broccoli kombu beet greens fava bean potato
           quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
           turnip greens parsnip.
         </p>
-        <img src={signatureImage} />
+        <StyledSignatureImage src={signatureImage} />
       </TextWrapper>
       <ImageWrapper></ImageWrapper>
     </StyledSection>
