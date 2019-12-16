@@ -31,14 +31,14 @@ const StyledSection = styled.section`
   display: flex;
   justify-content: space-evenly;
   background-color: ${colors.backgroundGrey};
-  padding: 70px;
+  padding: 70px 0;
   font-size: 16px;
   width: 100%;
 `;
 
 const StyledArticle = styled.article`
   text-align: center;
-  flex-basis: 17%;
+  flex-basis: 15%;
 `;
 
 const StyledArticleHeader = styled.h3`

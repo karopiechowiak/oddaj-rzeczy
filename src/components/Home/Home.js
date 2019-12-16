@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 body{
   font-family: ${fonts.mainFont};
   background-color: ${colors.backgroundWhite}
+  width: 100vw;
 }
 
 * {
