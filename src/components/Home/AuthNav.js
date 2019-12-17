@@ -3,6 +3,10 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { colors } from "./../../styles/styles";
 
+const StyledNav = styled.nav`
+  align-self: flex-end;
+`;
+
 const StyledUl = styled.ul`
   list-style: none;
   margin-right: 30px
@@ -30,7 +34,7 @@ const StyledNavLink = styled(NavLink)`
 
 export const AuthNav = () => {
   return (
-    <nav>
+    <StyledNav>
       <StyledUl>
         <StyledLi>
           <StyledNavLink to="/logowanie">Zaloguj</StyledNavLink>
@@ -39,6 +43,6 @@ export const AuthNav = () => {
           <StyledNavLink to="/rejestracja">Załóż konto</StyledNavLink>
         </StyledLi>
       </StyledUl>
-    </nav>
+    </StyledNav>
   );
 };

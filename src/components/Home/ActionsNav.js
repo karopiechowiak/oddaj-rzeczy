@@ -6,19 +6,24 @@ import { colors } from "./../../styles/styles";
 const StyledNav = styled.nav`
   margin-top: 50px;
 `;
+
 const StyledUl = styled.ul`
   list-style: none;
   margin-right: 30px
   display: flex;
   justify-content: center;
-  // border: 1px solid red;
+  width: 100%
 `;
 
 const StyledLi = styled.li`
   margin: 10px;
   border: 0.75px solid ${colors.textDarkGrey};
   display: flex;
-  width: 30%;
+  width: 300px;
+  justify-content: space-between;
+  @media (max-width: 1024px) {
+    width: 200px;
+  }
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -28,9 +33,11 @@ const StyledNavLink = styled(NavLink)`
   height: 100%;
   text-transform: uppercase;
   font-weight: 300;
-  // border: 1px solid red;
   text-align: center;
   width: 100%;
+  @media (max-width: 1024px) {
+    font-size: 26px;
+  }
 `;
 
 export const ActionsNav = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colors, fonts } from "./../../styles/styles";
+import { colors } from "./../../styles/styles";
 import headerImage from "./../../assets/Home-Hero-Image.jpg";
 import decorImage from "./../../assets/Decoration.svg";
 import { AuthNav } from "./AuthNav";
@@ -10,9 +10,9 @@ import { MainNav } from "./MainNav";
 const StyledHeader = styled.header`
   height: 100vh;
   background-image: url(${headerImage});
-  background-size: contain;
+  background-size: auto 100%;
   background-repeat: no-repeat;
-  background-position: -300px 15px;
+  background-position-x: -380px;
 `;
 
 const StyledContentWrapper = styled.div`
@@ -21,6 +21,10 @@ const StyledContentWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  @media (max-width: 1024px) {
+    margin-left 0;
+  }
 `;
 
 const StyledH1 = styled.h1`

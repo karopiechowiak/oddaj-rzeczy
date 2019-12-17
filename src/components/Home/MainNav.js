@@ -10,6 +10,10 @@ import {
   scroller
 } from "react-scroll";
 
+const StyledNav = styled.nav`
+  align-self: flex-end;
+`;
+
 const StyledUl = styled.ul`
   list-style: none;
   margin-right: 30px
@@ -22,8 +26,12 @@ const StyledLi = styled.li`
   // border: 1px solid purple;
   margin: 10px;
   padding: 10px 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
   &:nth-child(1) {
     border: 0.75px solid ${colors.textDarkGrey};
+    padding: 10px;
   }
 `;
 
@@ -41,7 +49,7 @@ const StyledLink = styled(Link)`
 
 export const MainNav = () => {
   return (
-    <nav>
+    <StyledNav>
       <StyledUl>
         <StyledLi>
           <StyledLink to="threeColumns" smooth duration={1000}>
@@ -69,6 +77,6 @@ export const MainNav = () => {
           </StyledLink>
         </StyledLi>
       </StyledUl>
-    </nav>
+    </StyledNav>
   );
 };
