@@ -35,6 +35,7 @@ const StyledNavLink = styled(NavLink)`
   font-weight: 300;
   text-align: center;
   width: 100%;
+  padding: 10px 0;
   @media (max-width: 1024px) {
     font-size: 26px;
   }

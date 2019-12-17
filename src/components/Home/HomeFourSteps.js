@@ -38,7 +38,7 @@ const StyledSection = styled.section`
 
 const StyledArticle = styled.article`
   text-align: center;
-  flex-basis: 15%;
+  flex-basis: 11%;
 `;
 
 const StyledArticleHeader = styled.h3`
@@ -52,7 +52,7 @@ const StyledIconImage = styled.img`
 
 const StyledLine = styled.hr`
   width: 100px;
-  margin: 0 auto;
+  margin: 10px auto;
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -63,6 +63,7 @@ const StyledNavLink = styled(NavLink)`
   font-weight: 300;
   text-align: center;
   width: 200px;
+  padding: 10px 45px;
   border: 1px solid;
   margin-top: 50px;
 `;
