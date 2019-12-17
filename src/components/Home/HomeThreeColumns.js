@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { colors, fonts } from "./../../styles/styles";
+import threeColumnsBackgroundImage from "./../../assets/3ColumnsBackground.png";
 
 const StyledSection = styled.section`
   display: flex;
   background-color: ${colors.backgroundYellow};
+  background-image: url(${threeColumnsBackgroundImage});
   justify-content: space-evenly;
   text-align: center;
   color: ${colors.textBrown};
