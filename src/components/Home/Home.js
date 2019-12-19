@@ -3,7 +3,7 @@ import { HomeHeader } from "./HomeHeader";
 import { HomeThreeColumns } from "./HomeThreeColumns";
 import { HomeFourSteps } from "./HomeFourSteps";
 import { HomeAboutUs } from "./HomeAboutUs";
-import { HomeOrganisations } from "./HomeOrganisations";
+import HomeOrganisations from "./HomeOrganisations";
 import { HomeContactUs } from "./HomeContactUs";
 import styled, { createGlobalStyle } from "styled-components";
 import { colors, fonts } from "./../../styles/styles";
