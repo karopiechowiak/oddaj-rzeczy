@@ -3,6 +3,7 @@ const initState = {
     foundations: {
       desc:
         "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
+      type: "Fundacja",
       list: [
         {
           id: 1,
@@ -57,6 +58,7 @@ const initState = {
     ngos: {
       desc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sem metus, fermentum varius posuere in, malesuada et tellus. Praesent consectetur et ipsum sed tempor.",
+      type: "Organizacja",
       list: [
         {
           id: 1,
@@ -93,6 +95,7 @@ const initState = {
     local: {
       desc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis vitae velit eget sagittis. Sed placerat arcu sit amet lorem malesuada maximus eu id massa.",
+      type: "Zbiórka",
       list: [
         {
           id: 1,

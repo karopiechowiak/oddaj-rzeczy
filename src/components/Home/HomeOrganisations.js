@@ -26,16 +26,17 @@ const HomeOrganisations = props => {
       </button>
       <button onClick={() => setFilter("local")}>Lokalnym zbiórkom</button>
       <div>
-        {foundations.list.map(item => {
-          return (
-            <article key={item.id}>
-              <h3>Fundacja {item.name}</h3>
-              <p>{item.goal}</p>
-              <p>{item.needs}</p>
-            </article>
-          );
-        })}
-        {/* <p>{props.[filter].map(item => console.log(item))}</p> */}
+        <p>{props[filter].desc}</p>
+
+        {props[filter].list.map(item => (
+          <article key={item.id}>
+            <h3>
+              {props[filter].type} {item.name}
+            </h3>
+            <p>{item.goal}</p>
+            <p>{item.needs}</p>
+          </article>
+        ))}
       </div>
     </section>
   );
