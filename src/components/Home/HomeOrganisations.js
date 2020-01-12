@@ -32,6 +32,8 @@ const HomeOrganisations = () => {
     fetchOrganisations(organisations);
   }, []);
 
+  useEffect(() => setCurrentPage(1), [filter]);
+
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   let organisationsData = <h2>Wczytywanie... </h2>;
@@ -48,11 +50,13 @@ const HomeOrganisations = () => {
       <section>
         <h2 id="organisations">Komu pomagamy?</h2>
         <StyledDecorImage src={decorImage} />
-        <button onClick={() => setFilter("foundations")}>Fundacjom</button>
-        <button onClick={() => setFilter("ngos")}>
-          Organizacjom pozarządowym
-        </button>
-        <button onClick={() => setFilter("local")}>Lokalnym zbiórkom</button>
+        <div>
+          <button onClick={() => setFilter("foundations")}>Fundacjom</button>
+          <button onClick={() => setFilter("ngos")}>
+            Organizacjom pozarządowym
+          </button>
+          <button onClick={() => setFilter("local")}>Lokalnym zbiórkom</button>
+        </div>
         <div>
           {" "}
           <p>{organisations[filter].desc}</p>
@@ -62,6 +66,8 @@ const HomeOrganisations = () => {
           itemsPerPage={itemsPerPage}
           totalItems={organisations[filter].list.length}
           paginate={paginate}
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
         />
       </section>
     );
