@@ -13,19 +13,32 @@ const StyledWrapper = styled.section`
   text-align: center;
   display: flex;
   flex-direction: column;
+
   h2 {
     margin-top: 30px;
   }
+`;
+
+const StyledDecorImage = styled.img`
+  margin-top: 20px;
+`;
+
+const StyledFoundationsInfo = styled.p`
+  width: 50%;
+  margin: 0 auto 50px;
+`;
+
+const StyledFoundationsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
 
   button {
-    // padding: 15px 20px;
     background: transparent;
     font-family: ${fonts.mainFont};
     height: 70px;
     width: 180px;
     margin: 40px 20px;
     border: none;
-    border: 1px solid black;
     font-size: 18px;
     box-sizing: border-box;
 
@@ -33,10 +46,6 @@ const StyledWrapper = styled.section`
       border: 1px solid ${colors.textDarkGrey};
     }
   }
-`;
-
-const StyledDecorImage = styled.img`
-  margin-top: 20px;
 `;
 
 const StyledBtn = styled.button``;
@@ -79,11 +88,7 @@ const HomeOrganisations = () => {
       <StyledWrapper>
         <h2 id="organisations">Komu pomagamy?</h2>{" "}
         <StyledDecorImage src={decorImage} />
-        <div
-          style={{
-            display: "flex"
-          }}
-        >
+        <StyledFoundationsWrapper>
           <button onClick={() => setFilter("foundations")}>Fundacjom</button>
           <button onClick={() => setFilter("ngos")}>
             Organizacjom pozarządowym
@@ -91,10 +96,12 @@ const HomeOrganisations = () => {
           <button onClick={() => setFilter("local")}>
             Lokalnym <br /> zbiórkom
           </button>
-        </div>
+        </StyledFoundationsWrapper>
         <div>
           {" "}
-          <p>{organisations[filter].desc}</p>
+          <StyledFoundationsInfo>
+            {organisations[filter].desc}
+          </StyledFoundationsInfo>
           <Organisations organisations={currentOrgs} loading={loading} />
         </div>
         <Pagination

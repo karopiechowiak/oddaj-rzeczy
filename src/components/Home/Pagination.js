@@ -1,5 +1,22 @@
 import React, { useEffect } from "react";
-import { fonts } from "../../styles/styles";
+
+import styled from "styled-components";
+import { colors, fonts } from "../../styles/styles";
+
+const StyledButton = styled.button`
+  background: transparent;
+  font-family: ${fonts.mainFont};
+  height: 40px;
+  width: 30px;
+  margin: 40px 20px;
+  border: none;
+  font-size: 18px;
+  box-sizing: border-box;
+
+  &:focus {
+    border: 1px solid ${colors.textDarkGrey};
+  }
+`;
 
 export const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
   const pageNumbers = [];
@@ -13,9 +30,9 @@ export const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
   return (
     <nav>
       {pageNumbers.map(number => (
-        <button key={number} onClick={() => paginate(number)}>
+        <StyledButton key={number} onClick={() => paginate(number)}>
           {number}
-        </button>
+        </StyledButton>
       ))}
     </nav>
   );
