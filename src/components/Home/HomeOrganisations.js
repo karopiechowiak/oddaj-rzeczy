@@ -9,7 +9,6 @@ import { Organisations } from "./Organisations";
 import { Pagination } from "./Pagination";
 
 const StyledWrapper = styled.section`
-  height: 60vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -50,7 +49,7 @@ const StyledFoundationsWrapper = styled.div`
 
 const StyledBtn = styled.button``;
 
-const HomeOrganisations = () => {
+export const HomeOrganisations = () => {
   const [organisations, setOrganisations] = useState([]);
   const [filter, setFilter] = useState("foundations");
   const [loading, setLoading] = useState(true);
@@ -115,5 +114,3 @@ const HomeOrganisations = () => {
 
   return organisationsData;
 };
-
-export default HomeOrganisations;

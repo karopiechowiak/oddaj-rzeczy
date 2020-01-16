@@ -1,10 +1,12 @@
 import React from "react";
+
 import { HomeHeader } from "./HomeHeader";
 import { HomeThreeColumns } from "./HomeThreeColumns";
 import { HomeFourSteps } from "./HomeFourSteps";
 import { HomeAboutUs } from "./HomeAboutUs";
-import HomeOrganisations from "./HomeOrganisations";
+import { HomeOrganisations } from "./HomeOrganisations";
 import { HomeContactUs } from "./HomeContactUs";
+
 import styled, { createGlobalStyle } from "styled-components";
 import { colors, fonts } from "./../../styles/styles";
 
@@ -23,7 +25,6 @@ body{
 `;
 
 const StyledWrapper = styled.div`
-  min-height: 100vh;
   width: 100vw;
   margin: 0 auto;
   background-color: ${colors.blue};
