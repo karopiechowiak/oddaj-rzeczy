@@ -12,12 +12,11 @@ const StyledHeader = styled.header`
   background-image: url(${headerImage});
   background-size: auto 100%;
   background-repeat: no-repeat;
-  background-position-x: -380px;
+  background-position-x: -580px;
 `;
 
 const StyledContentWrapper = styled.div`
   margin-left: 50vh;
-  // border: 1px solid royalblue;
   height: 100%;
   display: flex;
   flex-direction: column;

@@ -1,14 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { colors, fonts } from "./../../styles/styles";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const StyledNav = styled.nav`
   align-self: flex-end;

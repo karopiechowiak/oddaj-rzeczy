@@ -9,35 +9,19 @@ import { AuthNav } from "./../Home/AuthNav";
 import { MainNav } from "./../Home/MainNav";
 import { Input } from "./../Home/HomeContactUs";
 
-export const Register = () => {
+export const Logout = () => {
   return (
     <Wrapper>
       <AuthNav />
       <MainNav />
-      <h2>
-        Załóż konto <br />
-        <img src={decorImage} alt="" />
-      </h2>
-      <FormWrapper>
-        <div>
-          <label name="email">Email </label>
-          <br />
-          <Input name="email" />
-        </div>
-        <div>
-          <label name="password">Hasło</label>
-          <br />
-          <Input name="password" />
-        </div>
-        <div>
-          <label name="password">Powtórz hasło</label>
-          <br />
-          <Input name="password" />
-        </div>
-      </FormWrapper>
+      <TextWrapper>
+        <h2>
+          Wylogowanie nastąpiło pomyślnie! <br />
+          <img src={decorImage} alt="" />
+        </h2>
+      </TextWrapper>
       <ButtonWrapper>
-        <button>Zaloguj się</button>
-        <button>Załóż konto</button>
+        <button>Strona główna</button>
       </ButtonWrapper>
     </Wrapper>
   );
@@ -56,15 +40,9 @@ const Wrapper = styled.div`
   }
 `;
 
-const FormWrapper = styled.form`
-  margin: 0 auto;
+const TextWrapper = styled.div`
+  margin: 200px auto 0;
   width: 400px;
-  height: 300px;
-  background-color: ${colors.backgroundGrey};
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
 `;
 
 const ButtonWrapper = styled.div`
